@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Jofluke Global Construction</title>
+  <title>JOfluke Global Construction</title>
   <link rel="stylesheet" href="./style.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" 
@@ -31,7 +31,7 @@
     <!-- Home Section -->
     <section id="inicio">
       <div class="inicio-text">
-        <h1>Jofluke Global Construction</h1>
+        <h1>Ofluke Global Construction</h1>
         <p>Building Tomorrow, Today.</p>
       </div>
     </section>
@@ -56,6 +56,21 @@
           <p>We deliver projects on time, within budget, and to the highest quality standards.</p>
         </div>
       </div>
+	  
+	  
+	  
+	  
+	  <div class="carousel-container">
+  <ul class="carousel" id="carousel">
+    <li><img src="https://raw.githubusercontent.com/joflukeglobalconstruction/joflukeglobalconstruction.github.io/bffb046e6db7b3c78bf6c5d4093c2f57b23b13ec/images/FB_IMG_17320215683345230.jpg" alt="Image 1"></li>
+    <li><img src="https://raw.githubusercontent.com/joflukeglobalconstruction/joflukeglobalconstruction.github.io/refs/heads/main/images/FB_IMG_17320215845911668.jpg" alt="Image 2"></li>
+    <li><img src="https://raw.githubusercontent.com/joflukeglobalconstruction/joflukeglobalconstruction.github.io/refs/heads/main/images/FB_IMG_17320215881286930.jpg" alt="Image 3"></li>
+    <li><img src="https://raw.githubusercontent.com/joflukeglobalconstruction/joflukeglobalconstruction.github.io/refs/heads/main/images/FB_IMG_17320215924392426.jpg" alt="Image 4"></li>
+    <li><img src="https://raw.githubusercontent.com/joflukeglobalconstruction/joflukeglobalconstruction.github.io/refs/heads/main/images/FB_IMG_17320215959641170.jpg" alt="Image 5"></li>
+	<li><img src="https://raw.githubusercontent.com/joflukeglobalconstruction/joflukeglobalconstruction.github.io/refs/heads/main/images/FB_IMG_17320216008063996.jpg" alt="Image 3"></li>
+    
+  </ul>
+</div>
     </section>
 <br>
 <br>
@@ -124,11 +139,75 @@
     <div class="derecha">
       <h3>Head Office</h3>
       <p>Ofluke Global Construction</p>
-      <p>Address: [Insert Address]</p>
+      <p>Address: No 17 Market Road, Omoku ONELGA, River State.</p>
       <p>Phone: [Insert Phone Number]</p>
-      <p>Email: [Insert Email]</p>
+      <p>Email: joflukeglobalconstruction@gmail.com</p>
       <h3>Careers</h3>
       <p>To apply for a job at Ofluke Global Construction, please send your CV and cover letter to: <a href="#">careers@oflukeglobalconstruction.com</a></p>
     </div>
   </div>
 </section>
+
+<style>
+
+.carousel-container {
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel {
+  display: flex;
+  flex-direction: row;
+  transition: transform 0.5s ease;
+  width: 10000px; /* arbitrary large width */
+}
+
+.carousel li {
+  margin-right: 10px;
+  width: 200px; /* adjust image width */
+}
+
+.carousel li img {
+  width: 100%;
+  height: 150px; /* adjust image height */
+  object-fit: cover;
+}
+
+</style>
+
+<script>
+const carousel = document.getElementById('carousel');
+let scrollPosition = 0;
+const scrollSpeed = 10; // Increased scroll speed
+const scrollInterval = 500; // Decreased scroll interval
+const carouselWidth = carousel.offsetWidth;
+const imageWidth = 200; // Adjust image width
+const imagesCount = carousel.children.length;
+
+let intervalId = setInterval(() => {
+  scrollPosition += scrollSpeed;
+  
+  if (scrollPosition >= carouselWidth) {
+    scrollPosition = 0;
+  }
+774
+  carousel.style.transform = `translateX(-${scrollPosition}px)`;
+}, scrollInterval);
+
+// Optional: Add event listener to pause scrolling on mouseover
+carousel.addEventListener('mouseover', () => {
+  clearInterval(intervalId);
+});
+
+carousel.addEventListener('mouseout', () => {
+  intervalId = setInterval(() => {
+    scrollPosition += scrollSpeed;
+    
+    if (scrollPosition >= carouselWidth) {
+      scrollPosition = 0;
+    }
+    
+    carousel.style.transform = `translateX(-${scrollPosition}px)`;
+  }, scrollInterval);
+});
+</script>7
